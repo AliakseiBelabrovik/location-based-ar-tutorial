@@ -12,18 +12,14 @@
     </script>
 </head>
 
+<script src="./src/main.js"></script>
 <body style='margin: 0; overflow: hidden;'>
-<!-- a-scene is a container for AR application -->
 <a-scene
         vr-mode-ui="enabled: false"
         embedded
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
-    <!-- The scale attribute is used because that model is pretty big and the custom rotation will make the model ‘look’ towards the user. -->
-    <!-- The animation-mixer attribute tells the model to use its built-in animation. -->
-    <!-- website to find locations https://www.latlong.net/ -->
-    <a-entity gltf-model="./assets/magnemite/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" gps-entity-place="longitude: 48.158708; latitude: 16.381965;" animation-mixer/>
-    <a-entity gltf-model="./assets/3D/arrow.glb" rotation="0 180 0" scale="0.15 0.15 0.15" gps-entity-place="longitude: 48.158708; latitude: 16.381965;" animation-mixer/>
-    <!-- the element that calculates rotation, the position of the user and the distance between the user and places -->
-    <a-camera gps-camera rotation-reader></a-camera>
+
+    <a-camera gps-camera rotation-reader>
+    </a-camera>
 </a-scene>
 </body>
